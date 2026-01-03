@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BST Visualizer</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h1>Binary Search Tree Visualizer</h1>
+
+<div class="container">
+
+    <!-- Top panel -->
+    <div class="panel">
+        <div class="card"><strong>Inserted Values:</strong><br><span id="history">—</span></div>
+        <div class="card"><strong>Traversal Output:</strong><br><span id="output">—</span></div>
+        <div class="card"><strong>Stats:</strong><br>
+            Nodes: <span id="count">0</span><br>
+            Height: <span id="height">0</span>
+        </div>
+    </div>
+
+    <!-- Controls -->
+    <div class="controls">
+        <input type="number" id="valueInput" placeholder="Enter value">
+        <button class="insert" onclick="insertValue()">Insert</button>
+        <button class="search" onclick="searchValue()">Search</button>
+        <button class="clear" onclick="clearTree()">Clear</button>
+    </div>
+
+    <div class="controls">
+        <button onclick="showTraversal('in')">Inorder</button>
+        <button onclick="showTraversal('pre')">Preorder</button>
+        <button onclick="showTraversal('post')">Postorder</button>
+    </div>
+
+    <!-- Tree SVG -->
+    <div class="tree-container">
+        <svg id="treeSVG">
+            <defs>
+                <linearGradient id="nodeGradient" x1="0" y1="0" x2="1" y2="1">
+                    <stop offset="0%" stop-color="#4ade80"/>
+                    <stop offset="100%" stop-color="#16a34a"/>
+                </linearGradient>
+            </defs>
+        </svg>
+    </div>
+
+</div>
+<script src="app.js"></script>
+
+</body>
+</html>
