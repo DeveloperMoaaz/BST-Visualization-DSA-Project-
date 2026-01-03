@@ -1,0 +1,8 @@
+{
+  "builds": [
+    {
+      "src": "bst dsa project/index.html",
+      "use": "@vercel/static"
+    }
+  ]
+}
